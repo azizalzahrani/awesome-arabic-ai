@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 دليل المساهمة | Contribution Guide
+    url: https://github.com/azizalzahrani/awesome-arabic-ai/blob/main/CONTRIBUTING.md
+    about: راجع معايير الإضافة قبل فتح issue | Review contribution rules before opening an issue
+  - name: 📧 البريد الإلكتروني | Email
+    url: mailto:contact@azizalzahrani.dev
+    about: اتصل بنا مباشرة | Contact the maintainer directly
+  - name: 🐦 X/Twitter
+    url: https://x.com/az_zahrani
+    about: تابعنا للأخبار والتحديثات | Follow for news and updates
