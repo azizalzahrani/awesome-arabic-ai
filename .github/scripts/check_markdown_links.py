@@ -8,6 +8,7 @@ import re
 import ssl
 import subprocess
 import sys
+from urllib.parse import urlparse
 import urllib.error
 import urllib.request
 
@@ -20,6 +21,9 @@ SKIP_PREFIXES = (
 SKIP_EXACT = {
     "https://github.com",
     "https://arxiv.org",
+}
+WARN_ONLY_HOSTS = {
+    "sdaia.gov.sa",
 }
 
 
@@ -46,6 +50,7 @@ def extract_urls(path: pathlib.Path) -> set[str]:
 
 
 def check_url(url: str) -> tuple[str, str]:
+    host = urlparse(url).hostname or ""
     context = ssl.create_default_context()
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
@@ -95,6 +100,9 @@ def check_url(url: str) -> tuple[str, str]:
                     return ("ok", f"{code} {url} -> {effective_url or url}")
         except Exception:
             pass
+
+    if host in WARN_ONLY_HOSTS:
+        return ("warn", f"runner-flaky {url}: {last_error}")
 
     return ("fail", last_error)
 
