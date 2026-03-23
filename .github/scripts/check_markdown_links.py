@@ -6,6 +6,7 @@ import concurrent.futures
 import pathlib
 import re
 import ssl
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -48,7 +49,8 @@ def check_url(url: str) -> tuple[str, str]:
     context = ssl.create_default_context()
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; awesome-arabic-ai-link-checker/1.0)"}
+    user_agent = "Mozilla/5.0 (compatible; awesome-arabic-ai-link-checker/1.0)"
+    headers = {"User-Agent": user_agent}
 
     for method in ("HEAD", "GET"):
         try:
@@ -62,6 +64,37 @@ def check_url(url: str) -> tuple[str, str]:
                 return ("fail", f"{error.code} {url}")
         except Exception as error:
             last_error = f"{type(error).__name__} {url}"
+
+    # Fall back to curl on runners where urllib has domain-specific TLS/network issues.
+    for include_head in ("--head", ""):
+        command = [
+            "curl",
+            "--location",
+            "--silent",
+            "--show-error",
+            "--insecure",
+            "--max-time",
+            "20",
+            "--output",
+            "/dev/null",
+            "--write-out",
+            "%{http_code}\t%{url_effective}",
+            "--user-agent",
+            user_agent,
+        ]
+        if include_head:
+            command.append(include_head)
+        command.append(url)
+        try:
+            result = subprocess.run(command, check=False, capture_output=True, text=True)
+            if result.returncode == 0:
+                code, _, effective_url = result.stdout.partition("\t")
+                if code == "429":
+                    return ("warn", f"rate-limited {url}")
+                if code.isdigit() and 200 <= int(code) < 400:
+                    return ("ok", f"{code} {url} -> {effective_url or url}")
+        except Exception:
+            pass
 
     return ("fail", last_error)
 
