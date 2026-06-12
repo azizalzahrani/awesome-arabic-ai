@@ -24,6 +24,9 @@ SKIP_EXACT = {
 }
 WARN_ONLY_HOSTS = {
     "sdaia.gov.sa",
+    # Corporate/government sites with aggressive bot protection; warn instead of fail.
+    "www.humain.com",
+    "globalaisummit.org",
 }
 
 
@@ -51,6 +54,7 @@ def extract_urls(path: pathlib.Path) -> set[str]:
 
 def check_url(url: str) -> tuple[str, str]:
     host = urlparse(url).hostname or ""
+    last_error = f"unreachable {url}"
     context = ssl.create_default_context()
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
