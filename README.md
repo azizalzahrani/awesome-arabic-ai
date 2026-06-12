@@ -1,16 +1,16 @@
 # موسوعة الذكاء الاصطناعي العربي 🌟
 # Awesome Arabic AI
 
-> أكبر مجموعة مُنسّقة لموارد الذكاء الاصطناعي العربية
-> The largest curated collection of Arabic AI resources
+> مجموعة مُنسّقة وموثّقة لموارد الذكاء الاصطناعي العربية: نماذج، بيانات، أدوات، أبحاث، ومجتمعات
+> A curated and verified collection of Arabic AI resources: models, datasets, tools, papers, and communities
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0 1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--23-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--12-blue)
 
-> تم التحقق يدوياً من الروابط العامة في هذه القائمة بتاريخ 2026-03-23.
-> Public links in this list were manually verified on 2026-03-23.
+> تم التحقق يدوياً من الروابط العامة ومن صحة المراجع العلمية في هذه القائمة بتاريخ 2026-06-12، وتُفحص الروابط أسبوعياً عبر GitHub Actions.
+> Public links and citations were manually verified on 2026-06-12; links are re-checked weekly via GitHub Actions.
 
 ---
 
@@ -35,12 +35,14 @@
 
 | النموذج | الجهة | الحجم | الرابط | الوصف |
 |---------|------|------|--------|--------|
-| **Jais** | Inception / Core42 | 13B/30B | [huggingface.co/inceptionai/jais-13b-chat](https://huggingface.co/inceptionai/jais-13b-chat) | نموذج عربي-إنجليزي عالي الأداء من الإمارات، مُحسّن لفهم وتوليد اللغة العربية |
-| **ALLaM** | HUMAIN | 7B | [huggingface.co/humain-ai/ALLaM-7B-Instruct-preview](https://huggingface.co/humain-ai/ALLaM-7B-Instruct-preview) | نموذج تعليماتي عربي متاح كمعاينة عامة، موجّه للحوار والمهام العربية |
-| **Falcon** | TII | 7B/40B | [falconllm.tii.ae](https://falconllm.tii.ae/) | نموذج مفتوح المصدر من معهد تقنية الابتكار بالإمارات، يدعم العربية ضمن عائلة نماذج متعددة اللغات |
-| **Qwen** | Alibaba | 1B-110B | [huggingface.co/Qwen](https://huggingface.co/Qwen) | نموذج صيني متعدد اللغات بدعم قوي للعربية |
+| **Jais** | Inception / MBZUAI | 590M–70B | [huggingface.co/inceptionai/jais-13b-chat](https://huggingface.co/inceptionai/jais-13b-chat) | عائلة نماذج عربية-إنجليزية مفتوحة من الإمارات، من أوائل النماذج المركّزة على العربية (jais وjais-adapted) |
+| **ALLaM** | SDAIA / HUMAIN | 7B (مفتوح) | [huggingface.co/humain-ai/ALLaM-7B-Instruct-preview](https://huggingface.co/humain-ai/ALLaM-7B-Instruct-preview) | النموذج السعودي الرائد؛ نسخة 7B متاحة للعامة برخصة Apache-2.0، ونسخة 34B تشغّل تطبيق HUMAIN Chat |
+| **Falcon-Arabic** | TII | 7B (H1: 3B–34B) | [huggingface.co/blog/tiiuae/falcon-arabic](https://huggingface.co/blog/tiiuae/falcon-arabic) | أول نموذج عربي في عائلة Falcon (مايو 2025)، تبعته عائلة Falcon-H1-Arabic حتى 34B |
+| **Fanar** | QCRI / MCIT قطر | 7B/9B | [arxiv.org/abs/2501.13944](https://arxiv.org/abs/2501.13944) | منصة قطرية للذكاء الاصطناعي التوليدي العربي (Fanar Star وFanar Prime) مع دعم اللهجات والكلام والصور |
+| **SILMA** | SILMA AI | 9B | [huggingface.co/silma-ai/SILMA-9B-Instruct-v1.0](https://huggingface.co/silma-ai/SILMA-9B-Instruct-v1.0) | نموذج عربي مفتوح من شركة سعودية ناشئة مبني على Gemma-2، أداء قوي مقارنة بحجمه |
+| **AceGPT** | FreedomIntelligence | 7B–32B | [huggingface.co/FreedomIntelligence/AceGPT-7B-chat](https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat) | نموذج عربي مُوطَّن ثقافياً مبني على Llama، الإصدار v2 يشمل أحجام 8B و32B |
+| **Qwen** | Alibaba | 0.6B–235B | [huggingface.co/Qwen](https://huggingface.co/Qwen) | عائلة نماذج متعددة اللغات (Qwen3) بدعم قوي للعربية |
 | **BLOOM** | BigScience | 176B | [huggingface.co/bigscience/bloom](https://huggingface.co/bigscience/bloom) | نموذج متعدد اللغات يشمل العربية، مفتوح المصدر |
-| **AceGPT** | Freedom Intelligence | 7B/13B | [huggingface.co/FreedomIntelligence/AceGPT-7B-chat](https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat) | نموذج متعدد اللغات مع إصدارات عامة تدعم العربية ومهام المحادثة |
 
 ### Arabic BERT & Transformer Models
 
@@ -58,25 +60,39 @@
 |---------|--------|--------|
 | **multilingual-e5-base** | [huggingface.co/intfloat/multilingual-e5-base](https://huggingface.co/intfloat/multilingual-e5-base) | نموذج Embeddings متعدد اللغات مناسب للاسترجاع والبحث الدلالي ويدعم العربية |
 | **paraphrase-multilingual-mpnet-base-v2** | [huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2) | نموذج تمثيل متعدد اللغات مفيد للتشابه الدلالي وتجميع النصوص العربية |
+| **BGE-M3** | [huggingface.co/BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3) | نموذج Embeddings متعدد اللغات والوظائف (Dense/Sparse/Multi-vector) بأداء قوي في الاسترجاع العربي |
+
+### التقييم والمعايير | Benchmarks & Leaderboards
+
+| المورد | النوع | الرابط | الوصف |
+|--------|------|--------|--------|
+| **Open Arabic LLM Leaderboard (OALL)** | لوحة صدارة | [huggingface.co/spaces/OALL/Open-Arabic-LLM-Leaderboard](https://huggingface.co/spaces/OALL/Open-Arabic-LLM-Leaderboard) | لوحة الصدارة المفتوحة لتقييم وترتيب نماذج اللغة العربية على Hugging Face |
+| **ArabicMMLU** | معيار تقييم | [arxiv.org/abs/2402.12840](https://arxiv.org/abs/2402.12840) | معيار فهم متعدد المهام: 40 مهمة و14,575 سؤال اختيار من متعدد من امتحانات مدرسية عربية |
+| **ALUE** | معيار تقييم | [aclanthology.org/2021.wanlp-1.18/](https://aclanthology.org/2021.wanlp-1.18/) | معيار تقييم فهم اللغة العربية على 8 مهام مع لوحة صدارة عامة |
 
 ---
 
 ## مجموعات البيانات | Datasets
 
+> 💡 للاستكشاف الشامل: فهرس **[Masader](https://arbml.github.io/masader/)** من مجتمع ARBML يوثّق أكثر من 600 مجموعة بيانات عربية للنصوص والكلام.
+> 💡 For comprehensive discovery: ARBML's **[Masader](https://arbml.github.io/masader/)** catalogue documents 600+ Arabic NLP and speech datasets.
+
 ### Text Corpora
 
 | المجموعة | الحجم | الاستخدام | الرابط | الوصف |
 |---------|------|----------|--------|--------|
-| **OSCAR (Arabic)** | ~77GB | Pre-training | [huggingface.co/datasets/oscar](https://huggingface.co/datasets/oscar) | مجموعة نصوص عربية ضخمة مستخرجة من الويب، مشروع مفتوح المصدر |
+| **101 Billion Arabic Words** | 101B words | Pre-training | [huggingface.co/datasets/ClusterlabAi/101_billion_arabic_words_dataset](https://huggingface.co/datasets/ClusterlabAi/101_billion_arabic_words_dataset) | من أكبر مجموعات النصوص العربية المفتوحة (Apache-2.0)، مستخرجة من Common Crawl ومنظفة |
+| **OSCAR (Arabic)** | ~77GB | Pre-training | [oscar-project.org](https://oscar-project.org) | مجموعة نصوص متعددة اللغات تشمل العربية مستخرجة من الويب (أحدث إصدار OSCAR 23.01) |
 | **Arabic Wikipedia** | ~200MB | Reference | [dumps.wikimedia.org](https://dumps.wikimedia.org/arwiki/) | صفحات الموسوعة الحرة العربية، نصوص عالية الجودة |
 | **OpenITI** | ~25B words | Historical texts | [openiti.org](https://openiti.org) | مشروع الكتب الإسلامية والعربية مفتوحة المصدر |
-| **Arabic Gigaword** | 900K docs | News | [catalog.ldc.upenn.edu](https://catalog.ldc.upenn.edu/LDC2011T11) | مجموعة ضخمة من الأخبار العربية |
+| **Arabic Gigaword** | 900K docs | News | [catalog.ldc.upenn.edu](https://catalog.ldc.upenn.edu/LDC2011T11) | مجموعة ضخمة من الأخبار العربية (تتطلب ترخيص LDC) |
 
 ### Task-Specific Datasets
 
 | المجموعة | المهمة | الحجم | الرابط | الوصف |
 |---------|------|------|--------|--------|
-| **ARCD** | Reading Comprehension | 1.4K QA pairs | [huggingface.co/datasets/arcd](https://huggingface.co/datasets/arcd) | مجموعة اختبار قراءة الفهم العربية |
+| **ARCD** | Reading Comprehension | 1.4K QA pairs | [huggingface.co/datasets/hsseinmz/arcd](https://huggingface.co/datasets/hsseinmz/arcd) | مجموعة اختبار قراءة الفهم العربية |
+| **CIDAR** | Instruction Tuning | 10K instructions | [huggingface.co/datasets/arbml/CIDAR](https://huggingface.co/datasets/arbml/CIDAR) | مجموعة تعليمات عربية مُواءَمة ثقافياً لضبط نماذج اللغة (ARBML) |
 | **Tashkeela** | Diacritization | 400K+ words | [huggingface.co/datasets/arbml/tashkeela](https://huggingface.co/datasets/arbml/tashkeela) | مجموعة نصوص عربية مشكلة (بالحركات) |
 | **Arabic Web Treebank** | Parsing | 30K sentences | [universaldependencies.org/treebanks/ar_padt](https://universaldependencies.org/treebanks/ar_padt/index.html) | مجموعة جمل عربية موسومة بشجرة التحليل |
 
@@ -92,7 +108,7 @@
 | **Farasa** | شاملة | [farasa.qcri.org](https://farasa.qcri.org/) | أداة معالجة نصوص عربية قوية مع دعم التحليل الصرفي والجذر |
 | **Madamira** | تحليل صرفي | [camel.abudhabi.nyu.edu/madamira/](https://camel.abudhabi.nyu.edu/madamira/) | نظام تحليل صرفي متقدم للعربية |
 | **Stanza (Arabic)** | شاملة | [stanfordnlp.github.io/stanza/](https://stanfordnlp.github.io/stanza/) | مكتبة معالجة لغة طبيعية من Stanford مع دعم العربية |
-| **spaCy (Arabic models)** | شاملة | [spacy.io](https://spacy.io) | مكتبة NLP حديثة مع نماذج عربية |
+| **spaCy** | شاملة | [spacy.io](https://spacy.io) | مكتبة NLP صناعية سريعة؛ دعم أساسي للعربية (توكنة وقواعد لغوية) دون نماذج عربية رسمية مدرّبة |
 
 ### Text Processing Utilities
 
@@ -126,22 +142,25 @@
 
 ## الأبحاث والأوراق العلمية | Research Papers
 
-### Recent Papers (2023-2026)
+### أوراق النماذج | Model Papers
 
 | الورقة | الجهة | السنة | الرابط | الملخص |
 |-------|------|------|--------|--------|
-| **Jais: A Fully Arabic-Centric LLM** | Inception/G42 | 2023 | [arxiv.org/abs/2308.16149](https://arxiv.org/abs/2308.16149) | أول نموذج لغة عربي-إنجليزي متوازن كبير الحجم |
+| **Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models** | Inception / MBZUAI | 2023 | [arxiv.org/abs/2308.16149](https://arxiv.org/abs/2308.16149) | ورقة نموذج Jais، من أوائل النماذج التوليدية المفتوحة المركّزة على العربية |
+| **ALLaM: Large Language Models for Arabic and English** | SDAIA | 2024 | [arxiv.org/abs/2407.15390](https://arxiv.org/abs/2407.15390) | ورقة النموذج السعودي ALLaM: توسيع المفردات ونقل المعرفة والمواءمة مع التفضيلات البشرية |
+| **AceGPT, Localizing Large Language Models in Arabic** | FreedomIntelligence | 2023 | [arxiv.org/abs/2309.12053](https://arxiv.org/abs/2309.12053) | توطين نماذج اللغة الكبيرة عربياً وثقافياً عبر التدريب المسبق والضبط والمواءمة (NAACL 2024) |
+| **Fanar: An Arabic-Centric Multimodal Generative AI Platform** | QCRI | 2025 | [arxiv.org/abs/2501.13944](https://arxiv.org/abs/2501.13944) | منصة فنار القطرية: نموذجا Fanar Star وFanar Prime مع قدرات كلام وصور واسترجاع |
+| **The Falcon Series of Open Language Models** | TII | 2023 | [arxiv.org/abs/2311.16867](https://arxiv.org/abs/2311.16867) | ورقة عائلة Falcon المفتوحة (7B–180B) من معهد تقنية الابتكار الإماراتي |
 | **AraBERT: Transformer-based Model for Arabic Language Understanding** | AUB | 2020 | [arxiv.org/abs/2003.00104](https://arxiv.org/abs/2003.00104) | نموذج BERT متقدم للفهم العميق للغة العربية |
-| **Modern Arabic NLP: A Comprehensive Survey** | Multiple | 2022 | [arxiv.org/abs/2210.05444](https://arxiv.org/abs/2210.05444) | مسح شامل لأحدث تقنيات معالجة اللغة الطبيعية العربية |
-| **Curated Corpora for Automatic Arabic Dialect Detection** | KAUST | 2021 | [arxiv.org/abs/2109.14948](https://arxiv.org/abs/2109.14948) | دراسة عميقة في التعرف على اللهجات العربية |
-| **Falcon: A Language Model for Open Domain Reasoning** | TII | 2023 | [arxiv.org/abs/2311.16867](https://arxiv.org/abs/2311.16867) | نموذج لغة متقدم مع دعم قوي للعربية |
 
-### Benchmark & Evaluation Papers
+### مسوح ومعايير تقييم | Surveys & Benchmark Papers
 
-| الورقة | الرابط | الوصف |
-|-------|--------|--------|
-| **ALUE: Arabic Language Understanding Evaluation** | [arxiv.org/abs/2101.10012](https://arxiv.org/abs/2101.10012) | معايير تقييم موحدة للغة العربية |
-| **Arabic Named Entity Recognition: A Literature Review** | [arxiv.org/abs/2104.10255](https://arxiv.org/abs/2104.10255) | مراجعة شاملة لأبحاث التعرف على الكيانات المسماة |
+| الورقة | السنة | الرابط | الوصف |
+|-------|------|--------|--------|
+| **A Panoramic Survey of Natural Language Processing in the Arab World** | 2020 | [arxiv.org/abs/2011.12631](https://arxiv.org/abs/2011.12631) | مسح بانورامي شامل لمعالجة اللغة العربية: التحديات والتاريخ ومجالات البحث (Habash & Darwish) |
+| **A Survey on Arabic Named Entity Recognition** | 2023 | [arxiv.org/abs/2302.03512](https://arxiv.org/abs/2302.03512) | مراجعة شاملة لتطور التعرف على الكيانات المسماة العربية حتى عصر النماذج المدرّبة مسبقاً |
+| **ArabicMMLU: Assessing Massive Multitask Language Understanding in Arabic** | 2024 | [arxiv.org/abs/2402.12840](https://arxiv.org/abs/2402.12840) | أول معيار فهم متعدد المهام للعربية من امتحانات مدرسية حقيقية (ACL 2024 Findings) |
+| **ALUE: Arabic Language Understanding Evaluation** | 2021 | [aclanthology.org/2021.wanlp-1.18/](https://aclanthology.org/2021.wanlp-1.18/) | معيار تقييم موحد لفهم اللغة العربية على 8 مهام (WANLP 2021) |
 
 ---
 
@@ -151,8 +170,9 @@
 
 | الشركة | الدولة | التخصص | الرابط | الوصف |
 |-------|-------|--------|--------|--------|
-| **SDAIA** | 🇸🇦 السعودية | ذكاء اصطناعي وطني | [sdaia.gov.sa](https://sdaia.gov.sa) | الهيئة السعودية للبيانات والذكاء الاصطناعي، تطور ALLaM ومبادرات وطنية |
-| **TII** | 🇦🇪 الإمارات | التكنولوجيا المتقدمة | [tii.ae](https://tii.ae) | معهد تقنية الابتكار، طور نموذج Falcon المفتوح المصدر |
+| **SDAIA** | 🇸🇦 السعودية | ذكاء اصطناعي وطني | [sdaia.gov.sa](https://sdaia.gov.sa) | الهيئة السعودية للبيانات والذكاء الاصطناعي؛ أطلقت نموذج ALLaM ومبادرات وطنية للبيانات والذكاء الاصطناعي |
+| **HUMAIN** | 🇸🇦 السعودية | ذكاء اصطناعي شامل | [humain.com](https://www.humain.com) | شركة ذكاء اصطناعي تابعة لصندوق الاستثمارات العامة (2025)؛ تطوّر نماذج ALLaM وتطبيق HUMAIN Chat |
+| **TII** | 🇦🇪 الإمارات | التكنولوجيا المتقدمة | [tii.ae](https://tii.ae) | معهد تقنية الابتكار، طور عائلة Falcon المفتوحة ونموذج Falcon-Arabic |
 | **G42** | 🇦🇪 الإمارات | الحوسبة السحابية والذكاء الاصطناعي | [g42.ai](https://g42.ai) | شركة رائدة في الذكاء الاصطناعي والحوسبة السحابية بالشرق الأوسط |
 
 ### شركات خاصة ناشئة
@@ -161,7 +181,7 @@
 |-------|-------|--------|--------|--------|
 | **Mozn** | 🇸🇦 السعودية | حلول ذكاء اصطناعي | [mozn.ai](https://mozn.ai) | متخصصة في تطبيقات الذكاء الاصطناعي للقطاع الخاص |
 | **Lucidya** | 🇸🇦 السعودية | تحليل وسائل التواصل | [lucidya.com](https://lucidya.com) | منصة تحليل المشاعر والوسائط الاجتماعية العربية |
-| **Lean Technologies** | 🇸🇦 السعودية | التكنولوجيا المالية | [lean.technology](https://lean.technology) | منصة البنوك المفتوحة الرائدة |
+| **Lean Technologies** | 🇸🇦 السعودية | التكنولوجيا المالية | [leantech.me](https://www.leantech.me) | بنية تحتية للمدفوعات والمصرفية المفتوحة في السعودية والإمارات |
 | **Elm** | 🇸🇦 السعودية | الحلول الرقمية | [elm.sa](https://elm.sa) | متخصصة في التحول الرقمي والحلول الذكية |
 
 ### الشركات الكبرى مع مبادرات ذكاء اصطناعي
@@ -179,6 +199,7 @@
 
 | المجتمع | المنصة | الوصف | الرابط |
 |--------|--------|--------|--------|
+| **ARBML** | GitHub | مجتمع مفتوح يضم مئات الباحثين لتمكين العربية بأدوات ونماذج مفتوحة المصدر (Masader وغيرها) | [github.com/ARBML](https://github.com/ARBML) |
 | **CAMeL Lab** | Website | مختبر وأرشيف أبحاث وموارد متخصص في اللغة العربية ومعالجة اللهجات | [camel.abudhabi.nyu.edu](https://camel.abudhabi.nyu.edu/) |
 | **Hugging Face Forums (Arabic NLP)** | Forum | نقاشات وأسئلة حول النماذج والأدوات العربية على منصة Hugging Face | [discuss.huggingface.co/search?q=arabic%20nlp](https://discuss.huggingface.co/search?q=arabic%20nlp) |
 
@@ -186,17 +207,16 @@
 
 | الحدث | التكرار | الموقع | الوصف |
 |------|--------|--------|--------|
-| **ArabAI Summit** | سنوي | الخليج | مؤتمر سنوي لأحدث تطورات الذكاء الاصطناعي في الوطن العربي |
-| **Arabic NLP Workshop** | مختلف | متنوع | ورش عمل متخصصة في معالجة اللغة الطبيعية العربية |
+| **[القمة العالمية للذكاء الاصطناعي (GAIN)](https://globalaisummit.org)** | كل سنتين | الرياض | قمة دولية تنظمها سدايا تحت رعاية ملكية؛ النسخة الرابعة في سبتمبر 2026 |
+| **[مؤتمر ArabicNLP (سابقاً WANLP)](https://aclanthology.org/venues/wanlp/)** | سنوي | مع مؤتمرات ACL | المؤتمر البحثي الأبرز لمعالجة اللغة العربية، تنظمه SIGARAB |
 
 ### Influential Accounts to Follow
 
-**على منصات التواصل (X/Twitter, LinkedIn):**
+**على منصات التواصل (X/Twitter, GitHub):**
 - **@az_zahrani** - مصدر معلومات متخصص في الذكاء الاصطناعي العربي
 - **@SDAIA_SA** - التحديثات الرسمية من الهيئة السعودية للبيانات والذكاء الاصطناعي
-- **@TII_AE** - أخبار ومنشورات معهد تقنية الابتكار
-- **@CAMeL_Lab** - أبحاث ومشاريع معهد NYU Abu Dhabi
-- **@ArabicNLP** - أحدث الدراسات والأدوات في معالجة اللغة العربية
+- **@TIIuae** - أخبار ومنشورات معهد تقنية الابتكار الإماراتي
+- **ARBML** - مجتمع معالجة اللغة العربية مفتوح المصدر على GitHub
 
 ---
 
@@ -323,10 +343,9 @@ All content is free to use, share, and modify.
 
 - 🌍 **Languages**: العربية + English
 - ⭐ **Star this Awesome List**: [github.com/azizalzahrani/awesome-arabic-ai](https://github.com/azizalzahrani/awesome-arabic-ai)
-- 🔎 **Link Verification**: Manually checked on 2026-03-23
-- 📊 **Last Updated**: 2026-03-23
+- 🔎 **Link & Citation Verification**: Manually checked on 2026-06-12; links re-checked weekly via GitHub Actions
+- 📊 **Last Updated**: 2026-06-12
 - 👥 **Contributors**: Welcome!
-- 📈 **Growth**: This list is growing continuously
 
 ---
 

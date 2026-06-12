@@ -70,8 +70,8 @@ Before adding any resource, ensure it meets these criteria:
 ### الخطوة 1: Fork المشروع
 
 ```bash
-# انسخ المشروع إلى حسابك
-git clone https://github.com/azizalzahrani/awesome-arabic-ai.git
+# اعمل Fork من GitHub أولاً، ثم انسخ نسختك (استبدل YOUR_USERNAME باسم حسابك)
+git clone https://github.com/YOUR_USERNAME/awesome-arabic-ai.git
 cd awesome-arabic-ai
 ```
 
@@ -311,5 +311,5 @@ Thank you for helping make Awesome Arabic AI better!
 
 ---
 
-*آخر تحديث: 2026-03-23*
-*Last Updated: 2026-03-23*
+*آخر تحديث: 2026-06-12*
+*Last Updated: 2026-06-12*
